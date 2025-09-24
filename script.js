@@ -38,3 +38,5 @@ if(localStorage.getItem(CONSENT_KEY)===null){
 } else if(hasConsent()){
   enableOptional();
 }
+wireForm('contactFormHome','contactMsgHome'); // Startseite
+wireForm('contactForm','contactMsg');         // Kontaktseite
