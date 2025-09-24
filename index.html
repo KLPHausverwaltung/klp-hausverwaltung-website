@@ -86,21 +86,40 @@
     </div>
     <div class="card">
       <h3>Kontakt</h3>
-     <form id="contactFormHome" action="https://getform.io/f/awnykrlb" method="POST">
+  <form id="contactFormHome" action="https://getform.io/f/awnykrlb" method="POST">
   <input type="hidden" name="form_type" value="Kontaktformular">
   <input type="hidden" name="_subject" value="Neue Kontaktanfrage über die Website">
-  <input type="text" name="_gotcha" style="display:none"> <!-- Honeypot gegen Spam -->
+  <input type="text" name="_gotcha" style="display:none">
 
-  <table class="clean">
-    <!-- deine Felder: Name, E-Mail, Nachricht etc. bleiben unverändert -->
-    …
-  </table>
+  <label>Vor- & Nachname<br>
+    <input name="name" required style="width:100%">
+  </label><br><br>
 
-  <div style="margin-top:10px">
-    <button class="btn btn-primary" type="submit">Anfrage senden</button>
-  </div>
+  <label>E-Mail<br>
+    <input type="email" name="email" required style="width:100%">
+  </label><br><br>
+
+  <label>Telefon (optional)<br>
+    <input type="tel" name="phone" style="width:100%">
+  </label><br><br>
+
+  <label>Art der Anfrage<br>
+    <select name="request_type" required style="width:100%">
+      <option value="">Bitte auswählen</option>
+      <option>Vermietung</option>
+      <option>Verkauf</option>
+      <option>Allgemeine Anfrage</option>
+    </select>
+  </label><br><br>
+
+  <label>Nachricht<br>
+    <textarea name="message" rows="4" style="width:100%"></textarea>
+  </label><br><br>
+
+  <button class="btn btn-primary" type="submit">Anfrage senden</button>
   <div id="contactMsgHome" class="small muted" style="margin-top:6px"></div>
 </form>
+
 
       <p class="small muted" style="margin-top:8px">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß <a href="datenschutz.html">Datenschutz</a> zu.</p>
     </div>
@@ -134,6 +153,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
