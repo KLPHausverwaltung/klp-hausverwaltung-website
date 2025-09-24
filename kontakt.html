@@ -41,15 +41,22 @@
 
   <div class="card">
     <h3>Kontaktformular</h3>
-    <form action="https://getform.io/f/awnykrlb" method="POST">
-      <input type="hidden" name="_subject" value="Neue Anfrage über die Website" />
-      <p><label>Vor- & Nachname<br><input name="name" required style="width:100%"></label></p>
-      <p><label>E-Mail<br><input type="email" name="email" required style="width:100%"></label></p>
-      <p><label>Betreff<br><input name="subject" style="width:100%"></label></p>
-      <p><label>Nachricht<br><textarea name="message" rows="5" style="width:100%"></textarea></label></p>
-      <button class="btn btn-primary" type="submit">Absenden</button>
-      <p class="small muted">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß <a href="datenschutz.html">Datenschutz</a> zu.</p>
-    </form>
+    <form id="contactForm" action="https://getform.io/f/awnykrlb" method="POST">
+  <input type="hidden" name="form_type" value="Kontaktformular">
+  <input type="hidden" name="_subject" value="Neue Kontaktanfrage über die Website">
+  <input type="text" name="_gotcha" style="display:none">
+
+  <table class="clean">
+    <!-- deine Felder: Name, E-Mail, Betreff, Nachricht etc. bleiben unverändert -->
+    …
+  </table>
+
+  <div style="margin-top:10px">
+    <button class="btn btn-primary" type="submit">Absenden</button>
+  </div>
+  <div id="contactMsg" class="small muted" style="margin-top:6px"></div>
+</form>
+
     <p><a class="btn" href="https://cal.com/klp-hausverwaltung/erstgespraech" target="_blank" rel="noopener">Termin buchen</a></p>
   </div>
 </section>
