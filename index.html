@@ -3,398 +3,126 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KLP Hausverwaltung GbR – Zuverlässige Verwaltung von Miet- & WEG-Objekten</title>
-  <meta name="description" content="Transparente, digitale Hausverwaltung für Miet- und WEG-Objekte. 24/7 Schadenmeldung, Eigentümerportal, schnelle Kommunikation." />
-  <meta name="robots" content="index, follow" />
+  <title>KLP Hausverwaltung GbR – Ihre Immobilie in besten Händen</title>
+  <meta name="description" content="Mietverwaltung, Sondereigentumsverwaltung und Betriebskostenerstellung. Transparente Prozesse, schnelle Reaktionszeiten." />
   <meta property="og:title" content="KLP Hausverwaltung GbR" />
-  <meta property="og:description" content="Transparente, digitale Hausverwaltung für Miet- und WEG-Objekte." />
+  <meta property="og:description" content="Transparente, digitale Hausverwaltung in Fisch." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.klp-hausverwaltung.de" />
-  <meta property="og:image" content="/og-image.jpg" />
-  <link rel="icon" href="/favicon.ico" />
-  <style>
-    :root{
-      --bg: #0b1020;      /* Tiefes Blau */
-      --bg-2:#0f172a;     /* Sekundärer Hintergrund */
-      --fg: #e5e7eb;      /* Text hell */
-      --muted:#9ca3af;    /* Muted */
-      --brand:#f59e0b;    /* Gold */
-      --brand-2:#fbbf24;  /* Hellgold Akzent */
-      --ok:#10b981;       /* Grün */
-      --warn:#f59e0b;     /* Amber */
-      --danger:#ef4444;   /* Rot */
-      --card:#111827;     /* Karte */
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 16px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.6}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1140px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:40;background:linear-gradient(180deg,rgba(11,16,32,.95),rgba(11,16,32,.75));backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;gap:12px;align-items:center}
-    .brand img{width:42px;height:42px;border-radius:8px;object-fit:contain;background:#0a0f20;padding:4px;border:1px solid rgba(255,255,255,.1)}
-    .brand strong{font-size:1.05rem;letter-spacing:.3px}
-    .menu{display:flex;gap:22px;align-items:center}
-    .btn{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,#1f2937,#111827);padding:10px 16px;border-radius:var(--radius);box-shadow:var(--shadow);transition:.2s}
-    .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
-    .btn-primary{background:linear-gradient(180deg,var(--brand),#b45309);border-color:#92400e}
-
-    /* Hero */
-    .hero{position:relative;overflow:hidden;background:radial-gradient(1200px 600px at 10% -10%,rgba(251,191,36,.12),transparent),radial-gradient(900px 500px at 90% 10%,rgba(245,158,11,.15),transparent),var(--bg)}
-    .hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:72px 0}
-    .kicker{display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:var(--muted);font-size:.8rem}
-    h1{font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:.7rem 0}
-    .lead{font-size:1.05rem;color:#cbd5e1}
-    .stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px}
-    .stat{background:linear-gradient(180deg,#0f172a,#0b1222);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 14px;min-width:160px}
-    .stat b{font-size:1.2rem}
-    .card{background:linear-gradient(180deg,#0f172a 0%, #0b1020 100%);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow)}
-
-    /* Sections */
-    section{padding:64px 0;border-top:1px solid rgba(255,255,255,.06)}
-    h2{font-size:1.85rem;margin:0 0 14px}
-    .muted{color:var(--muted)}
-
-    /* Features */
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .feature{padding:18px}
-
-    /* Showcase */
-    .showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .showcase .tile{aspect-ratio:16/10;border-radius:14px;background:#0c1328;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden}
-    .tile .label{position:absolute;bottom:10px;left:10px;background:rgba(17,24,39,.8);padding:6px 10px;border-radius:999px;font-size:.8rem;border:1px solid rgba(255,255,255,.12)}
-
-    /* Split */
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-    .box{padding:20px}
-
-    /* CTA */
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
-
-    /* Footer */
-    footer{padding:48px 0;background:#0a0f20;border-top:1px solid rgba(255,255,255,.06)}
-    .footgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-    .small{font-size:.9rem}
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero .grid{grid-template-columns:1fr}
-      .features{grid-template-columns:1fr 1fr}
-      .showcase{grid-template-columns:1fr 1fr}
-      .split{grid-template-columns:1fr}
-      .footgrid{grid-template-columns:1fr}
-    }
-    @media (max-width: 640px){
-      .menu{display:none}
-      .features,.showcase{grid-template-columns:1fr}
-    }
-  </style>
+  <meta property="og:url" content="https://klp-hausverwaltung.de" />
+  <meta property="og:image" content="og-image.jpg" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <img src="Logo_normal.png" alt="Logo KLP Hausverwaltung GbR" />
-        <strong>KLP Hausverwaltung GbR</strong>
-      </div>
-      <nav class="menu">
-        <a href="#leistungen">Leistungen</a>
-        <a href="#referenzen">Referenzen</a>
-        <a href="#team">Team</a>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="assets/Logo_normal.png" alt="Logo KLP Hausverwaltung GbR" />
+      <strong>KLP Hausverwaltung GbR</strong>
+    </div>
+    <nav class="menu">
+      <a href="index.html">Start</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="team.html">Team</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="kontakt.html" class="btn btn-primary">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero grid">
+    <div>
+      <span class="kicker">Digitale & transparente Verwaltung</span>
+      <h1>Ihre Immobilie in besten Händen</h1>
+      <p class="lead">Mietverwaltung, Sondereigentumsverwaltung und Betriebskostenerstellung – mit klaren Prozessen, transparenten Abrechnungen und kurzen Reaktionszeiten.</p>
+      <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="kontakt.html" class="btn btn-primary">Kostenloses Erstgespräch</a>
+        <a href="leistungen.html" class="btn">Unsere Leistungen</a>
         <a href="https://cal.com/klp-hausverwaltung/erstgespraech" target="_blank" rel="noopener" class="btn">Termin buchen</a>
-        <a href="#kontakt" class="btn btn-primary">Angebot anfordern</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container grid">
-      <div>
-        <span class="kicker">Digitale & transparente Verwaltung</span>
-        <h1>Ihre Immobilie in besten Händen</h1>
-        <p class="lead">Wir verwalten Miet- und WEG-Objekte mit klaren Prozessen, transparenten Abrechnungen und kurzen Reaktionszeiten. Eigentümerportal, 24/7 Schadenmeldung und geprüfte Handwerker – alles aus einer Hand.</p>
-        <div class="cta">
-          <a href="#kontakt" class="btn btn-primary">Kostenloses Erstgespräch</a>
-          <a href="#leistungen" class="btn">Unsere Leistungen</a>
-          <a href="https://cal.com/klp-hausverwaltung/erstgespraech" target="_blank" rel="noopener" class="btn">Termin buchen</a>
-          <a href="https://wa.me/491733420602?text=Hallo%20KLP%20Hausverwaltung%2C%20ich%20habe%20eine%20Frage." target="_blank" rel="noopener" class="btn" aria-label="WhatsApp">WhatsApp</a>
-        </div>
-        <div class="stats">
-          <div class="stat"><b>98%</b><br><span class="muted">Schadenbearbeitung <br>innerh. 48h</span></div>
-          <div class="stat"><b>250+</b><br><span class="muted">Wohneinheiten <br>in Betreuung</span></div>
-          <div class="stat"><b>4.8★</b><br><span class="muted">Kundenzufriedenheit</span></div>
-        </div>
-      </div>
-      <div class="card" style="padding:18px">
-        <div class="box">
-          <h3 style="margin:0 0 8px">Schaden online melden</h3>
-          <p class="muted">Mieter:innen können Schäden direkt digital melden. Wir koordinieren Handwerker und halten Sie auf dem Laufenden.</p>
-          <form id="damageForm" action="https://formspree.io/f/YYYYFORMID" method="POST" class="small">
-            <input type="hidden" name="_subject" value="Schadenmeldung über die Website" />
-            <label>Adresse<br><input required name="address" placeholder="Straße, Hausnr., PLZ Ort" style="width:100%"></label><br><br>
-            <label>Kategorie<br>
-              <select name="category" required style="width:100%">
-                <option value="Wasser">Wasser</option>
-                <option value="Heizung">Heizung</option>
-                <option value="Elektrik">Elektrik</option>
-                <option value="Allgemein">Allgemein</option>
-              </select>
-            </label><br><br>
-            <label>Beschreibung<br><textarea name="desc" rows="4" placeholder="Was ist passiert?" style="width:100%"></textarea></label><br><br>
-            <button class="btn btn-primary" type="submit">Meldung senden</button>
-            <span id="damageMsg" class="muted" style="margin-left:10px"></span>
-          </form>
-        </div>
       </div>
     </div>
-  </section>
-
-  <!-- Leistungen -->
-  <section id="leistungen">
-    <div class="container">
-      <h2>Leistungen</h2>
-      <p class="muted">Unsere Kernleistungen – transparent, zuverlässig und digital unterstützt.</p>
-      <div class="features">
-        <div class="card feature">
-          <h3>Mietverwaltung</h3>
-          <p>Mietinkasso, Nebenkostenabrechnung, Mieterkommunikation, Leerstandsmanagement.</p>
-        </div>
-        <div class="card feature">
-          <h3>Sondereigentumsverwaltung</h3>
-          <p>Betreuung einzelner Einheiten innerhalb einer WEG: Mieterwechsel, Übergaben, Abnahmen, laufende Betreuung.</p>
-        </div>
-        <div class="card feature">
-          <h3>Betriebskostenerstellung</h3>
-          <p>Rechtskonforme Erstellung von Betriebskostenabrechnungen inkl. Belegprüfung und Versand.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Referenzen / Objekte -->
-  <section id="referenzen">
-    <div class="container">
-      <h2>Ausgewählte Objekte</h2>
-      <p class="muted">Ein kurzer Auszug aus unserem Bestand.</p>
-      <div class="showcase">
-        <div class="tile"><span class="label">Altbau WEG • 24 Einheiten</span></div>
-        <div class="tile"><span class="label">Neubau Quartier • 56 Einheiten</span></div>
-        <div class="tile"><span class="label">Mietshaus • 18 Einheiten</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team / Vertrauen -->
-  <section id="team">
-    <div class="container split">
-      <div>
-        <h2>Team & Werte</h2>
-        <p class="muted">Kaufleute der Grundstücks- und Wohnungswirtschaft, Immobilienfachwirte und Techniker arbeiten bei uns Hand in Hand. Wir setzen auf proaktive Kommunikation, klare KPIs und digitale Prozesse.</p>
-        <ul>
-          <li>Feste Ansprechpartner:innen</li>
-          <li>Geprüfte Partner-Handwerksbetriebe</li>
-          <li>ISO-konforme Ablagen & Datenschutz</li>
-        </ul>
-      </div>
-      <div class="card box">
-        <h3 style="margin-top:0">Zahlen & Fakten</h3>
-        <p class="muted small">Stand: <span id="today"></span></p>
-        <div class="stats">
-          <div class="stat"><b>12</b><br><span class="muted">Mitarbeitende</span></div>
-          <div class="stat"><b>35</b><br><span class="muted">WEGs</span></div>
-          <div class="stat"><b>80+</b><br><span class="muted">Mietverträge p.a.</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kontakt -->
-  <section id="kontakt">
-    <div class="container split">
-      <div>
-        <h2>Kontakt & Angebot</h2>
-        <p class="muted">Senden Sie uns die Eckdaten zu Ihrem Objekt – wir melden uns mit einem transparenten Angebot.</p>
-        <form id="contactForm" action="https://formspree.io/f/XXXXFORMID" method="POST">
-          <input type="hidden" name="_subject" value="Neue Anfrage über die Website" />
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-            <label>Vor- & Nachname<br><input required name="name" placeholder="Max Mustermann" style="width:100%"></label>
-            <label>E-Mail<br><input required type="email" name="email" placeholder="max@beispiel.de" style="width:100%"></label>
-          </div>
-          <br>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-            <label>Objektart<br>
-              <select name="type" style="width:100%">
-                <option>WEG</option>
-                <option>Mietshaus</option>
-                <option>Gewerbe</option>
-              </select>
-            </label>
-            <label>Einheiten<br><input name="units" type="number" min="1" placeholder="z. B. 24" style="width:100%"></label>
-          </div>
-          <br>
-          <label>Nachricht<br><textarea name="message" rows="5" placeholder="Kurzbeschreibung, Adresse, besondere Anforderungen …" style="width:100%"></textarea></label>
-          <br>
-          <div style="display:flex;align-items:center;gap:12px">
-            <button class="btn btn-primary" type="submit">Anfrage senden</button>
-            <span id="contactMsg" class="muted"></span>
-          </div>
-        </form>
-        <p class="small muted" style="margin-top:8px">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß <a href="#datenschutz">Datenschutz</a> zu.</p>
-      </div>
-      <div class="card box">
-        <h3 style="margin-top:0">Standort</h3>
-        <p>Kapellenstraße 9A, 54439 Fisch<br>Tel.: <a href="tel:+491733420602">0173 3420 602</a><br>E-Mail: <a href="mailto:info@klp-hausverwaltung.de">info@klp-hausverwaltung.de</a></p>
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:1px solid rgba(255,255,255,.08)">
-          <iframe title="Karte – KLP Hausverwaltung GbR" src="https://www.google.com/maps?q=Kapellenstraße%209A%2C%2054439%20Fisch&output=embed" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container footgrid">
-      <div>
-        <strong>KLP Hausverwaltung GbR</strong>
-        <p class="muted small">Kapellenstraße 9A, 54439 Fisch • Tel. <a href="tel:+491733420602">0173 3420 602</a> • <a href="mailto:info@klp-hausverwaltung.de">info@klp-hausverwaltung.de</a></p>
-        <p class="small">© <span id="year"></span> KLP Hausverwaltung GbR – Alle Rechte vorbehalten.</p>
-      </div>
-      <div class="small">
-        <a href="#impressum">Impressum</a> • <a href="#datenschutz">Datenschutz</a> • <a href="#downloads">Downloads</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Modale/Abschnitte: Impressum & Datenschutz (vereinfachte Platzhalter) -->
-  <section id="impressum" class="container" style="padding:28px 20px 64px">
-    <h2>Impressum</h2>
-    <p class="small">Angaben gemäß § 5 TMG</p>
-    <p><strong>KLP Hausverwaltung GbR</strong><br>
-    Kapellenstraße 9A, 54439 Fisch<br>
-    Tel.: <a href="tel:+491733420602">0173 3420 602</a><br>
-    E-Mail: <a href="mailto:info@klp-hausverwaltung.de">info@klp-hausverwaltung.de</a></p>
-    <p><strong>Vertreten durch</strong><br>
-    Gesellschafter: Kristina Keiler, Fabian Lenz</em></p>
-    <p><strong>Umsatzsteuer-ID</strong> (falls vorhanden): <em>eintragen</em></p>
-    <p><strong>Berufshaftpflicht</strong> (falls vorhanden): <em>Versicherer, Geltungsraum</em></p>
-    <p class="small muted">Hinweis: Dieses Impressum ist ein Muster. Bitte prüfen Sie die Angaben auf Vollständigkeit (z. B. Aufsichtsbehörde, Kammer, Registereintrag), sofern für Ihre Tätigkeit erforderlich. Keine Rechtsberatung.</p>
-  </section>
-  <section id="datenschutz" class="container" style="padding:0 20px 64px">
-    <h2>Datenschutzerklärung</h2>
-    <p class="muted small">Kurzfassung der wichtigsten Punkte nach Art. 13 DSGVO.</p>
-    <h3>1. Verantwortlicher</h3>
-    <p>KLP Hausverwaltung GbR, Kapellenstraße 9A, 54439 Fisch, Tel. <a href="tel:+491733420602">0173 3420 602</a>, E-Mail: <a href="mailto:info@klp-hausverwaltung.de">info@klp-hausverwaltung.de</a></p>
-    <h3>2. Zwecke der Verarbeitung</h3>
-    <ul>
-      <li>Bearbeitung von Anfragen über das Kontaktformular</li>
-      <li>Schadensmeldungen von Mieter:innen</li>
-      <li>Website-Betrieb (Server-Logs, Sicherheit)</li>
-    </ul>
-    <h3>3. Rechtsgrundlagen</h3>
-    <ul>
-      <li>Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Anbahnung)</li>
-      <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem Betrieb)</li>
-      <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung, z. B. bei optionalen Cookies/Diensten)</li>
-    </ul>
-    <h3>4. Empfänger</h3>
-    <p>IT-Dienstleister/Hoster. Bei Nutzung externer Formulardienste (z. B. Formspree) erfolgt eine Übermittlung an diese Anbieter. Ein AV-Vertrag/DPA wird geschlossen.</p>
-    <h3>5. Speicherdauer</h3>
-    <p>Kontaktanfragen werden nach abschließender Bearbeitung bzw. gemäß gesetzlichen Aufbewahrungsfristen gelöscht.</p>
-    <h3>6. Betroffenenrechte</h3>
-    <p>Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch, Beschwerde bei einer Aufsichtsbehörde.</p>
-    <h3>7. Cookies</h3>
-    <p>Diese Website verwendet nur technisch notwendige Cookies. Optionale Dienste werden erst nach Einwilligung geladen. Einstellungen siehe <a href="#" onclick="openConsent();return false;">Cookie-Einstellungen</a>.</p>
-    <h3>8. Einbindung von Google Maps</h3>
-    <p>Beim Laden der Karte wird Ihre IP-Adresse an Google (Google Ireland Ltd.) übertragen. Die Karte wird erst nach Ihrer Einwilligung geladen (Opt‑In über das Cookie-Banner). Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO.</p>
-    <p class="small muted">Muster ohne Gewähr – bitte durch Ihre Rechtsberatung prüfen.</p>
-  </section>
-
-  <!-- Scripts: minimal, ohne externe Abhängigkeiten -->
-  <script>
-    // Datum in "Zahlen & Fakten"
-    const d = new Date();
-    document.getElementById('today').textContent = d.toLocaleDateString('de-DE');
-    document.getElementById('year').textContent = d.getFullYear();
-
-    // Dummy-Submit Handler (Formspree/Webhook können hier integriert werden)
-    function submitContact(e){
-      e.preventDefault();
-      const msg = document.getElementById('contactMsg');
-      msg.textContent = 'Danke! Wir melden uns zeitnah.';
-      e.target.reset();
-    }
-    function submitDamage(e){
-      e.preventDefault();
-      const msg = document.getElementById('damageMsg');
-      msg.textContent = 'Meldung erfasst – wir kümmern uns!';
-      e.target.reset();
-    }
-  </script>
-
-  <!-- Strukturierte Daten -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "KLP Hausverwaltung GbR",
-    "url": "https://www.klp-hausverwaltung.de",
-    "logo": "https://www.klp-hausverwaltung.de/logo.svg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Kapellenstraße 9A",
-      "postalCode": "54439",
-      "addressLocality": "Fisch",
-      "addressCountry": "DE"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+49-173-3420602",
-      "email": "info@klp-hausverwaltung.de",
-      "contactType": "customer service",
-      "availableLanguage": ["German"]
-    }
-  }
-  </script>
-  <!-- Einfache Cookie-/Consent-Lösung (Opt‑In) -->
-  <style>
-    #cookieBanner{position:fixed;inset:auto 0 0 0;background:#0a0f20;border-top:1px solid rgba(255,255,255,.1);padding:16px;z-index:1000;display:none}
-    #cookieBanner .inner{max-width:1140px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between}
-    #cookieBanner p{margin:0}
-    #cookieBanner .actions{display:flex;gap:8px}
-  </style>
-  <div id="cookieBanner" role="dialog" aria-live="polite">
-    <div class="inner">
-      <p class="small">Wir verwenden nur technisch notwendige Cookies. Externe Inhalte (z. B. Google Maps) werden erst nach Ihrer Zustimmung geladen. <a href="#datenschutz">Mehr erfahren</a>.</p>
-      <div class="actions">
-        <button class="btn" onclick="denyConsent()">Ablehnen</button>
-        <button class="btn btn-primary" onclick="acceptConsent()">Zustimmen</button>
-      </div>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Schaden online melden</h3>
+      <p class="muted">Mieter:innen können Schäden direkt digital melden. Wir koordinieren Handwerker und halten Sie auf dem Laufenden.</p>
+      <form action="https://formspree.io/f/YYYYFORMID" method="POST" class="small">
+        <input type="hidden" name="_subject" value="Schadenmeldung über die Website" />
+        <label>Adresse<br><input required name="address" placeholder="Straße, Hausnr., PLZ Ort" style="width:100%"></label><br><br>
+        <label>Kategorie<br>
+          <select name="category" required style="width:100%">
+            <option value="Wasser">Wasser</option>
+            <option value="Heizung">Heizung</option>
+            <option value="Elektrik">Elektrik</option>
+            <option value="Allgemein">Allgemein</option>
+          </select>
+        </label><br><br>
+        <label>Beschreibung<br><textarea name="desc" rows="4" placeholder="Was ist passiert?" style="width:100%"></textarea></label><br><br>
+        <button class="btn btn-primary" type="submit">Meldung senden</button>
+      </form>
     </div>
   </div>
-  <script>
-    const CONSENT_KEY = 'klp_consent';
-    const banner = document.getElementById('cookieBanner');
-    function hasConsent(){ return localStorage.getItem(CONSENT_KEY) === 'true'; }
-    function showBanner(){ banner.style.display = 'block'; }
-    function hideBanner(){ banner.style.display = 'none'; }
-    function acceptConsent(){ localStorage.setItem(CONSENT_KEY,'true'); hideBanner(); enableOptional(); }
-    function denyConsent(){ localStorage.setItem(CONSENT_KEY,'false'); hideBanner(); }
-    function openConsent(){ showBanner(); }
-    function enableOptional(){
-      // Google Maps Opt‑In: iframes mit data-src nachladen
-      document.querySelectorAll('iframe[data-src]').forEach(el=>{ el.src = el.getAttribute('data-src'); el.removeAttribute('data-src'); });
-    }
-    // Initial: Banner anzeigen, wenn noch keine Entscheidung vorliegt
-    if(localStorage.getItem(CONSENT_KEY) === null){ showBanner(); }
-    else if(hasConsent()){ enableOptional(); }
-  </script>
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/491733420602?text=Hallo%20KLP%20Hausverwaltung%2C%20ich%20habe%20eine%20Frage." target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;right:18px;bottom:18px;border-radius:999px;padding:12px 16px;background:linear-gradient(180deg,var(--brand),#b45309);border:1px solid #92400e;box-shadow:var(--shadow);z-index:1000">WhatsApp</a>
+</section>
 
+<section>
+  <div class="container grid-3">
+    <div class="card"><h3>Mietverwaltung</h3><p>Mietinkasso, Nebenkostenabrechnung, Mieterkommunikation, Leerstandsmanagement.</p></div>
+    <div class="card"><h3>Sondereigentumsverwaltung</h3><p>Betreuung einzelner Einheiten in WEGs: Mieterwechsel, Übergaben, Abnahmen.</p></div>
+    <div class="card"><h3>Betriebskostenerstellung</h3><p>Rechtskonforme Abrechnungen inkl. Belegprüfung und Versand.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="container grid-2">
+    <div class="card">
+      <h3>Standort</h3>
+      <p>Kapellenstraße 9A, 54439 Fisch<br>Tel.: <a href="tel:+491733420602">0173 3420 602</a><br>E-Mail: <a href="mailto:info@klp-hausverwaltung.de">info@klp-hausverwaltung.de</a></p>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:1px solid rgba(255,255,255,.08)">
+        <iframe title="Karte – KLP Hausverwaltung GbR" data-src="https://www.google.com/maps?q=Kapellenstraße%209A%2C%2054439%20Fisch&output=embed" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Kontakt</h3>
+      <form action="https://formspree.io/f/XXXXFORMID" method="POST">
+        <input type="hidden" name="_subject" value="Neue Anfrage über die Website" />
+        <table class="clean">
+          <tr><td>Vor- & Nachname</td><td><input name="name" required style="width:100%"></td></tr>
+          <tr><td>E-Mail</td><td><input type="email" name="email" required style="width:100%"></td></tr>
+          <tr><td>Objektart</td><td><select name="type" style="width:100%"><option>WEG</option><option>Mietshaus</option><option>Gewerbe</option></select></td></tr>
+          <tr><td>Einheiten</td><td><input type="number" name="units" min="1" style="width:100%"></td></tr>
+          <tr><td>Nachricht</td><td><textarea name="message" rows="4" style="width:100%"></textarea></td></tr>
+        </table>
+        <div style="margin-top:10px"><button class="btn btn-primary" type="submit">Anfrage senden</button></div>
+      </form>
+      <p class="small muted" style="margin-top:8px">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß <a href="datenschutz.html">Datenschutz</a> zu.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footgrid">
+    <div>
+      <strong>KLP Hausverwaltung GbR</strong>
+      <p class="muted small">Kapellenstraße 9A, 54439 Fisch • Tel. <a href="tel:+491733420602">0173 3420 602</a> • <a href="mailto:info@klp-hausverwaltung.de">info@klp-hausverwaltung.de</a></p>
+      <p class="small">© <span id="year"></span> KLP Hausverwaltung GbR – Alle Rechte vorbehalten.</p>
+    </div>
+    <div class="small">
+      <a href="impressum.html">Impressum</a> • <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+<a class="whatsapp-fab" href="https://wa.me/491733420602?text=Hallo%20KLP%20Hausverwaltung%2C%20ich%20habe%20eine%20Frage." target="_blank" rel="noopener">WhatsApp</a>
+
+<div id="cookieBanner" role="dialog" aria-live="polite">
+  <div class="inner container">
+    <p class="small">Wir verwenden nur technisch notwendige Cookies. Externe Inhalte (z. B. Google Maps) werden erst nach Ihrer Zustimmung geladen. <a href="datenschutz.html">Mehr erfahren</a>.</p>
+    <div class="actions">
+      <button class="btn" onclick="denyConsent()">Ablehnen</button>
+      <button class="btn btn-primary" onclick="acceptConsent()">Zustimmen</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
