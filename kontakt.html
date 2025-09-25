@@ -46,34 +46,33 @@
   <input type="hidden" name="_subject" value="Neue Kontaktanfrage über die Website">
   <input type="text" name="_gotcha" style="display:none">
 
-  <label>Vor- & Nachname<br>
-    <input name="name" required style="width:100%">
-  </label><br><br>
+  <table class="clean">
+    <tr>
+      <td>Vor- & Nachname</td>
+      <td><input name="name" required style="width:100%"></td>
+    </tr>
+    <tr>
+      <td>E-Mail</td>
+      <td><input type="email" name="email" required style="width:100%"></td>
+    </tr>
+    <tr>
+      <td>Telefon (optional)</td>
+      <td><input type="tel" name="phone" style="width:100%"></td>
+    </tr>
+    <tr>
+      <td>Nachricht</td>
+      <td><textarea name="message" rows="4" style="width:100%"></textarea></td>
+    </tr>
+  </table>
 
-  <label>E-Mail<br>
-    <input type="email" name="email" required style="width:100%">
-  </label><br><br>
-
-  <label>Telefon (optional)<br>
-    <input type="tel" name="phone" style="width:100%">
-  </label><br><br>
-
-  <label>Art der Anfrage<br>
-    <select name="request_type" required style="width:100%">
-      <option value="">Bitte auswählen</option>
-      <option>Vermietung</option>
-      <option>Verkauf</option>
-      <option>Allgemeine Anfrage</option>
-    </select>
-  </label><br><br>
-
-  <label>Nachricht<br>
-    <textarea name="message" rows="4" style="width:100%"></textarea>
-  </label><br><br>
-
-  <button class="btn btn-primary" type="submit">Anfrage senden</button>
-  <div id="contactMsgHome" class="small muted" style="margin-top:6px"></div>
+  <!-- Button -->
+  <div style="margin-top:10px">
+    <button class="btn btn-primary" type="submit">Absenden</button>
+  </div>
+  <!-- Meldung -->
+  <div id="contactMsg" class="small muted" style="margin-top:6px"></div>
 </form>
+
 
 
     <p><a class="btn" href="https://cal.com/klp-hausverwaltung/erstgespraech" target="_blank" rel="noopener">Termin buchen</a></p>
