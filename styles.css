@@ -43,7 +43,7 @@ a:hover{color:var(--brand-2)}
 header{position:sticky;top:0;z-index:30;background:linear-gradient(180deg,rgba(11,15,26,.9),rgba(11,15,26,.6));backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
 .brand{display:flex;align-items:center;gap:14px}
-.brand img{height:42px;width:auto;filter:drop-shadow(0 8px 24px rgba(0,0,0,.35))}
+.brand img{height:56px;width:auto;filter:drop-shadow(0 8px 24px rgba(0,0,0,.35))}
 .brand strong{font-weight:800;letter-spacing:.4px}
 .menu{display:flex;gap:18px;align-items:center}
 @media (max-width:720px){.menu{display:none}}
